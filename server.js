@@ -66,7 +66,7 @@ io.on('connection', (socket) => {
     // Envía la lista de temas y elige aleatoriamente uno de ellos.
 
     socket.on('temas', (evt1) => {
-        socket.broadcast.emit('temas', evt1);
+        socket.broadcast.emit('envio_temasj1', evt1);
     });
 
     // Resetea el tablero de juego.
