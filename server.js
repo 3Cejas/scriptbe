@@ -1,7 +1,7 @@
 const { RAE } = require('rae-api'); //Define el constructor del buscador de la RAE.
 const debug = false; // Modo desarrollador de rae-api.
 const rae = new RAE(debug); //Creamos una instancia del buscador de la RAE.
-const log = console.log; // Define la consola del servidor.
+const log = convxcvcxvcxsole.log; // Define la consola del servidor.
 const http = require("http").createServer(); // Define el servidor http.
 const io = require("socket.io")(http); // Define el socket.
 const port = process.env.PORT || 3000; // Define el puerto de comunicación con el servidor (puede ser o, el puerto dado por el entorno, o el 8000 si no lo encuentra).
@@ -66,7 +66,7 @@ io.on('connection', (socket) => {
     // Envía la lista de temas y elige aleatoriamente uno de ellos.
 
     socket.on('temas', (evt1) => {
-        socket.broadcast.emit('envio_temasj1', evt1);
+        socket.broadcast.emit('temas', evt1);
     });
 
     // Resetea el tablero de juego.
