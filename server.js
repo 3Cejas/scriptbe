@@ -66,7 +66,7 @@ io.on('connection', (socket) => {
     // Envía la lista de temas y elige aleatoriamente uno de ellos.
 
     socket.on('temas', (evt1) => {
-        socket.broadcast.emit('temas', evt1);
+        socket.broadcast.emit('temasj1', evt1);
     });
 
     // Resetea el tablero de juego.
@@ -93,8 +93,8 @@ io.on('connection', (socket) => {
         del jugador 2. 
     */
 
-    socket.on('envio_temas', (evt1) => {
-        socket.broadcast.emit('envio_temas', evt1);
+    socket.on('envia_temas', (evt1) => {
+        socket.broadcast.emit('recibe_temas', evt1);
     });
 
     // Envía la palabra bonus aleatoria al jugador 2.
